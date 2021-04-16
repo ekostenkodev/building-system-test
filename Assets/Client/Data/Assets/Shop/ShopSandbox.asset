@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28052e51a8364530b206dfdb21f2217c, type: 3}
+  m_Name: ShopSandbox
+  m_EditorClassIdentifier: 
+  icons: {fileID: 11400000, guid: 661e96cb1dd9b7944922815ada056653, type: 2}
+  texts: {fileID: 11400000, guid: 00af061f6b2e0bb4b8ca13cbb2a02536, type: 2}

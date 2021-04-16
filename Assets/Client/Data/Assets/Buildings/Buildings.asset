@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38023d946afa4a8989a7227d03f2bcf1, type: 3}
+  m_Name: Buildings
+  m_EditorClassIdentifier: 
+  buildings:
+  - id: MineralMining_1
+    prefab: {fileID: 8684378625305942581, guid: a91e449b3a226eb4da3baa789e6ac7a6, type: 3}
+  - id: MineralStorage_1
+    prefab: {fileID: 2687571294409239445, guid: e41e117a0ca103c48896b084daa41c09, type: 3}
+  - id: GasMining_1
+    prefab: {fileID: 6400759261872727293, guid: 670c8571510960541a126e0d5d2cc27c, type: 3}
+  - id: GasStorage_1
+    prefab: {fileID: 6443017084956376644, guid: 5e7fa209c7e8c2740ab6941f17a94054, type: 3}
+  progressIndicator: {fileID: 1308031724983120928, guid: f825dc96c15027b4d913d1ebf315163f, type: 3}

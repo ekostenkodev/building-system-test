@@ -1,0 +1,86 @@
+﻿{
+  "buildings": {
+    "mining": [
+      {
+        "id": "MineralMining_1",
+        "building": {
+          "level": 1,
+          "buildDuration": 60000,
+          "cost": [
+            {
+              "type": "gas",
+              "count": 100
+            }
+          ]
+        },
+        "mining": {
+          "currency": {
+            "type": "mineral",
+            "count": 20
+          },
+          "delay": 30000
+        }
+      },
+      {
+        "id": "GasMining_1",
+        "building": {
+          "level": 1,
+          "buildDuration": 120000,
+          "cost": [
+            {
+              "type": "mineral",
+              "count": 125
+            }
+          ]
+        },
+        "mining": {
+          "currency": {
+            "type": "gas",
+            "count": 10
+          },
+          "delay": 10000
+        }
+      }
+    ],
+    "storage": [
+      {
+        "id": "MineralStorage_1",
+        "building": {
+          "level": 1,
+          "buildDuration": 120000,
+          "cost": [
+            {
+              "type": "gas",
+              "count": 150
+            }
+          ]
+        },
+        "storage": {
+          "currency": {
+            "type": "mineral",
+            "count": 200
+          }
+        }
+      },
+      {
+        "id": "GasStorage_1",
+        "building": {
+          "level": 1,
+          "buildDuration": 180000,
+          "cost": [
+            {
+              "type": "mineral",
+              "count": 150
+            }
+          ]
+        },
+        "storage": {
+          "currency": {
+            "type": "gas",
+            "count": 300
+          }
+        }
+      }
+    ]
+  }
+}

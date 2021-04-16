@@ -1,0 +1,26 @@
+﻿{
+  "user": {
+    "currency": {
+      "current": [
+        {
+          "type": "gas",
+          "count": 150
+        },
+        {
+          "type": "mineral",
+          "count": 0
+        }
+      ],
+      "max": [
+        {
+          "type": "gas",
+          "count": 150
+        },
+        {
+          "type": "mineral",
+          "count": 0
+        }
+      ]
+    }
+  }
+}
