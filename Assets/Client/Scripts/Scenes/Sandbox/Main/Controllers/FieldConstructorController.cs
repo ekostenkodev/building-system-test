@@ -3,7 +3,7 @@ using Kadoy.BuildingSystem.Grid;
 using UnityEngine;
 
 namespace Kadoy.BuildingSystem.Sandbox.Controllers {
-  public class FielderConstructorController : MonoBehaviour, IFielder {
+  public class FieldConstructorController : MonoBehaviour, IFieldContainer {
     private IBuildingConstructor constructor;
     private GridAssets gridAssets;
     

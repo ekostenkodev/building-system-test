@@ -10,7 +10,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     private FieldInputReflector inputReflector;
 
     private IBuildingSelector selector;
-    private IFielder fielder;
+    private IFieldContainer fieldContainer;
     private BuildingAssets buildingAssets;
     
     public event Action<PlaceArgs> Placed;
@@ -24,14 +24,14 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
       inputReflector.Closed -= OnInputClose;
     }
 
-    public void Inject(IBuildingSelector selector, IFielder fielder, BuildingAssets buildingAssets) {
+    public void Inject(IBuildingSelector selector, IFieldContainer fieldContainer, BuildingAssets buildingAssets) {
       this.selector = selector;
-      this.fielder = fielder;
+      this.fieldContainer = fieldContainer;
       this.buildingAssets = buildingAssets;
     }
 
     public void Initialize() {
-      inputReflector.Initialize(fielder.Field.Grid, buildingAssets);
+      inputReflector.Initialize(fieldContainer.Field.Grid, buildingAssets);
 
       selector.Selected += OnStartBuilding;
       inputReflector.Clicked += OnClicked;
@@ -46,7 +46,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     private void OnClicked(PlaceArgs args) {
       OnInputClose();
       
-      var grid = fielder.Field.Grid;
+      var grid = fieldContainer.Field.Grid;
       var cell = grid.GetGridObject(args.Position);
 
       if (cell.IsEmpty) {

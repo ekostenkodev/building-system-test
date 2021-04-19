@@ -18,7 +18,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     private Db db;
     private IBuildingAcquirer acquirer;
     private IBuildingService service;
-    private IFielder fielder;
+    private IFieldContainer fieldContainer;
     private BuildingConstructor buildingConstructor;
     private ProgressConstructor progressConstructor;
     private BuildingAssets buildingAssets;
@@ -38,12 +38,12 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     public void Inject(Db db,
       IBuildingAcquirer acquirer,
       IBuildingService service,
-      IFielder fielder,
+      IFieldContainer fieldContainer,
       BuildingAssets buildingAssets) {
       this.db = db;
       this.acquirer = acquirer;
       this.service = service;
-      this.fielder = fielder;
+      this.fieldContainer = fieldContainer;
       this.buildingAssets = buildingAssets;
     }
 
@@ -74,7 +74,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     }
 
     private void OnClicked(Vector3 position) {
-      var cell = fielder.Field.Grid.GetGridObject(position);
+      var cell = fieldContainer.Field.Grid.GetGridObject(position);
 
       if (!cell.IsEmpty) {
         cell.Placed.Interactive();

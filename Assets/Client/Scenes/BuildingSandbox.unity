@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataBuilder: {fileID: 1636195939}
-  fielderConstructor: {fileID: 870086509}
+  fieldContainerConstructor: {fileID: 870086509}
   placeSelection: {fileID: 879527665}
   buildingConstructor: {fileID: 699902063}
   shop: {fileID: 1529284284}

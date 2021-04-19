@@ -9,7 +9,7 @@ namespace Kadoy.BuildingSystem.Sandbox {
 
     [Header("Controllers")]
     [SerializeField]
-    private FielderConstructorController fielderConstructor;
+    private FieldConstructorController fieldContainerConstructor;
 
     [SerializeField]
     private PlaceSelectionController placeSelection;
@@ -38,14 +38,14 @@ namespace Kadoy.BuildingSystem.Sandbox {
 
     private void InjectDependencies() {
       shop.Inject(db, shopService, placeSelection, buildingConstructor, dataBuilder.ShopAsset);
-      placeSelection.Inject(shop, fielderConstructor, dataBuilder.BuildingAssets);
-      buildingConstructor.Inject(db, shop, buildingService, fielderConstructor, dataBuilder.BuildingAssets);
-      fielderConstructor.Inject(buildingConstructor, dataBuilder.GridAssets);
+      placeSelection.Inject(shop, fieldContainerConstructor, dataBuilder.BuildingAssets);
+      buildingConstructor.Inject(db, shop, buildingService, fieldContainerConstructor, dataBuilder.BuildingAssets);
+      fieldContainerConstructor.Inject(buildingConstructor, dataBuilder.GridAssets);
       currency.Inject(db, dataBuilder.ShopAsset);
     }
 
     private void Initialize() {
-      fielderConstructor.Initialize();
+      fieldContainerConstructor.Initialize();
       shop.Initialize();
       placeSelection.Initialize();
       buildingConstructor.Initialize();
