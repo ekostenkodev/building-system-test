@@ -8,7 +8,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Inputs {
     private const float MaxDistance = 1000f;
 
     [SerializeField]
-    private Camera camera;
+    private new Camera camera;
 
     [SerializeField]
     private LayerMask mouseColliderLayerMask;
@@ -17,7 +17,6 @@ namespace Kadoy.BuildingSystem.Sandbox.Inputs {
 
     public event Action<Vector3> Down;
     public event Action<Vector3> Moved;
-    public event Action<Vector3> Drag;
     public event Action Closed;
 
     private void Update() {
@@ -25,14 +24,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Inputs {
 
       CheckMove(inputPosition);
       CheckClick(inputPosition);
-      CheckDrag(inputPosition);
       CheckClose();
-    }
-
-    private void CheckDrag(Vector3 inputPosition) {
-      if (Input.GetMouseButton(0)) {
-        Drag?.Invoke(inputPosition);
-      }
     }
 
     private void CheckClose() {

@@ -26,13 +26,13 @@ namespace Kadoy.BuildingSystem.Buildings.Goal {
     }
 
     public override void Start() {
-      MiningAsync();
+      MiningForResult();
     }
 
     public override void Execute() {
       if (isAvailableToCollect) {
         TakeMiningResult();
-        MiningAsync();
+        MiningForResult();
       }
     }
 
@@ -44,7 +44,11 @@ namespace Kadoy.BuildingSystem.Buildings.Goal {
       db.UpdateUser(user);
     }
 
-    private async UniTask MiningAsync() {
+    private UniTask MiningForResult() {
+      return MiningForResultAsync();
+    }
+
+    private async UniTask MiningForResultAsync() {
       Dispose();
 
       Mining.Value = true;
@@ -63,7 +67,6 @@ namespace Kadoy.BuildingSystem.Buildings.Goal {
 
     public void Dispose() {
       cancellationTokenSource?.Cancel(false);
-      //Mining.Dispose();
     }
   }
 }

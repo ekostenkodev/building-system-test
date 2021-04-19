@@ -56,7 +56,11 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     }
 
     private void OnAcquired(PlaceArgs args) {
-      ConstructBuildingAsync(args);
+      ConstructBuilding(args);
+    }
+
+    private UniTask ConstructBuilding(PlaceArgs args) {
+      return ConstructBuildingAsync(args);
     }
 
     private async UniTask ConstructBuildingAsync(PlaceArgs args) {

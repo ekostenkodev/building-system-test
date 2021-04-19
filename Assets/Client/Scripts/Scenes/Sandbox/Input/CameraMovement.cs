@@ -7,7 +7,7 @@ namespace Kadoy.BuildingSystem.Sandbox.Controllers {
     private const float MovementSpeed = 20f;
 
     [SerializeField]
-    private Camera camera;
+    private new Camera camera;
     
     [SerializeField]
     private Transform root;
